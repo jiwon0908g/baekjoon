@@ -23,10 +23,6 @@ int main() {
                 mini = e-s+1;
                 flag = 1;
             }
-            else if(s>=e&&s-e<mini) {
-                mini = s-e+1;
-                flag = 1;
-            }
             sum-=arr[s];
             s++;
         }
