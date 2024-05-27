@@ -11,8 +11,8 @@ int main() {
     int s=0;
     int e=0;
     int sum=arr[0];
-    int mini = 100000;
-    int flag = 0;
+    int mini = 1000000;
+
     while(s<n&&e<n) {
         if(sum<m) {
             e++;
@@ -21,13 +21,12 @@ int main() {
         else if(sum>=m) {
             if(e>=s&&e-s<mini) {
                 mini = e-s+1;
-                flag = 1;
             }
             sum-=arr[s];
             s++;
         }
     }
-    if(flag==0) cout << 0;
+    if(mini==1000000) cout << 0;
     else cout << mini;
 
     return 0;
